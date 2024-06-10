@@ -29,22 +29,38 @@ body {
         }
 
         .page-links {
-            ul {
-                display: flex;
-                gap: 39PX;
-                justify-content: flex-start;
-                align-items: center;
-                list-style: none;
-                margin: 0;
-                padding: 0;
+            
+            .links-desktop {
+                
+                ul {
+                    display: flex;
+                    gap: 39PX;
+                    justify-content: flex-start;
+                    align-items: center;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
 
-                li {
-                    padding: 10px;
-                    
-                    a {
-                        text-decoration: none;
-                        color: #f9f3b4;
+                    li {
+                        padding: 10px;
+                        
+                        a {
+                            text-decoration: none;
+                            color: #f9f3b4;
+                            font-size: 18px;
+                        }
                     }
+                }
+
+                @media screen and (max-width: 599px) {
+                    display: none;
+                }
+            }
+
+            .links-mobile {
+
+                @media screen and (min-width: 598px) {
+                    display: none;
                 }
             }
         }
@@ -55,7 +71,7 @@ body {
         box-sizing: border-box;
 
         .card {
-            background-color: #221d01;
+            background-color: #221d0169;
             position: relative;
             padding: 35px;
             border-radius: 21px;
@@ -102,6 +118,9 @@ body {
                 .article-content {
                     p {
                         margin: 0;
+                        font-size: 18px;
+                        text-align: justify;
+                        line-height: 25px;
                     }
                 }
             }
@@ -112,5 +131,25 @@ body {
         display: flex;
         justify-content: center;
         padding-top: 20px;
+        color: #f9f3b4;
+
+        .social-links {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .link {
+                width: 25px;
+                height: 25px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
 }
